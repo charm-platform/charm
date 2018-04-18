@@ -1,0 +1,68 @@
+Source: charm
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@charm.org>
+Uploaders: Holger Schinzel <holger@charm.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.charm.org/
+Vcs-Git: git://github.com/charmcoin/charm.git
+Vcs-Browser: https://github.com/charmcoin/charm
+
+Package: charmd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Charm is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Charm uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Charm Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, charmd, and the CLI tool
+ charm-cli to interact with the daemon.
+
+Package: charm-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Charm is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Charm uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Charm Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Charm-Qt, a GUI for Charm based on Qt.
+
+Package: charm-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Charm is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Charm uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Charm Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides charm-tx, a command-line transaction creation
+ tool which can be used without a charm daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.

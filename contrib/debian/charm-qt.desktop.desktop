@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Charm
+Comment=Charm P2P Cryptocurrency
+Exec=charm-qt %u
+Terminal=false
+Type=Application
+Icon=charm128
+MimeType=x-scheme-handler/charm;
+Categories=Office;Finance;
+Name[en_US]=charm-qt.desktop

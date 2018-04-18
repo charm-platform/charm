@@ -1,0 +1,6 @@
+usr/local/bin/charm-qt usr/bin
+share/pixmaps/charm32.xpm usr/share/pixmaps
+share/pixmaps/charm16.xpm usr/share/pixmaps
+share/pixmaps/charm128.png usr/share/pixmaps
+debian/charm-qt.desktop usr/share/applications
+debian/charm-qt.protocol usr/share/kde4/services/

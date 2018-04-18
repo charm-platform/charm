@@ -1,0 +1,22 @@
+[Unit]
+Description=Charm's distributed currency daemon
+After=network.target
+
+[Service]
+User=charmcore
+Group=charmcore
+
+Type=forking
+PIDFile=/var/lib/charmd/charmd.pid
+ExecStart=/usr/bin/charmd -daemon -pid=/var/lib/charmd/charmd.pid \
+-conf=/etc/charmcore/charm.conf -datadir=/var/lib/charmd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
